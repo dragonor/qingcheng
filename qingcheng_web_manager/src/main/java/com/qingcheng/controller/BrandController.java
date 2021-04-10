@@ -1,0 +1,29 @@
+package com.qingcheng.controller;
+
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.qingcheng.pojo.goods.Brand;
+import com.qingcheng.service.goods.BrandService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+/**
+ * @Description Brand的控制类
+ * @Author Dragon
+ * @Date 2021/4/11
+ * @Version 1.0.0
+ */
+@RestController
+@RequestMapping("/brand")
+public class BrandController {
+
+    @Reference
+    private BrandService brandService;
+
+    @RequestMapping("/findAll")
+    public List<Brand> findAll(){
+        return brandService.findAll();
+    }
+
+}
