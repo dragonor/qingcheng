@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>qingcheng_common_serviece</artifactId>
+    <artifactId>qingcheng_common_service</artifactId>
 
     <dependencies>
         <dependency>
